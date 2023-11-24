@@ -1,0 +1,25 @@
+@import './base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        @apply bg-[#171041] text-white
+    }
+}
+.container{
+    max-width: 1620px;
+}
+.spartak{
+    background: linear-gradient(to right, #9173D1 32.38%, #EC6EAD 89.62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.collction{
+    font-family: monospace;
+    background: linear-gradient(to right, #9173D1 -10.13%, #DC6EB3 101.09%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
