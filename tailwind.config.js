@@ -9,6 +9,9 @@ module.exports = {
       backgroundColor: {
         'button-color': '#9173D1'
       },
+      backgroundImage: {
+        'pink-effect': "url('../assets/icons/pink-effect.svg')",
+       }
       
     }
   },

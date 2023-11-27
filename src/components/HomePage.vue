@@ -5,11 +5,11 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
 </script>
 
 <template>
-  <div>
+  <div class="main-display">
     <div class="container mx-auto">
       <web-navbar />
       <!-- main img content -->
-      <div class="block md:flex mt-20">
+      <div class="block md:flex mt-20 ">
         <!-- contact -->
         <div class="w-1/2 px-5">
           <h1 class="text-7xl mt-12">
@@ -37,8 +37,55 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
           </div>
         </div>
         <!-- img -->
-        <div class="w-1/2">
-          <img src="../assets/icons/main_display_img.svg" alt="display-cartoon" class="mx-auto" />
+        <div class="w-1/2 relative display-img">
+          <img src="../assets/icons/main_display_img.svg" alt="display-cartoon" class="mx-auto z-10 relative" />
+          <div class="glass-effect h-[300px] w-[60%] absolute -top-3 left-32 z-0" ></div>
+          <div class="glass-effect h-full w-[50%] absolute -bottom-16 right-36"></div>
+          <div class="absolute top-0 right-20 z-20 w-max flex px-8 py-4 rounded-xl glass-effect">
+            <p class="text-2xl font-semibold grid">BID NOW!
+              <span class="text-xs font-normal">Latest Collection</span>
+            </p>
+          </div>
+          <div class="absolute bottom-40 right-20 w-max z-20 flex px-4 py-4 rounded-xl glass-effect">
+            <div>
+              <img src="../assets/icons/twoline-img.svg" alt="line-img">
+            </div>
+            <div>
+              <p class="text-3xl font-semibold">HAPE #6959</p>
+              <span class="text-xs text-black">HAPES PRIME</span>
+            </div>
+          </div>
+          <div class="absolute bottom-6 left-9  flex justify-between w-[334px] z-20 px-8 py-4 rounded-xl glass-effect" id="parallelogram">
+            <p class="grid mr-8">
+              <span class="font-semibold text-2xl">5.758 ETH</span>
+              <span>Latest Bid</span>
+            </p>
+            <p class="grid">
+              <span>$5758.31</span>
+              <span class="text-green-500">+12.45%</span>
+            </p>
+          </div>
+          <div class="absolute -bottom-20 left-44 z-10 w-max flex px-6 py-2 rounded-xl glass-effect">
+            <p class="text-lg font-semibold grid">Auction
+              <span class="text-sm font-medium">End In</span>
+            </p>
+          </div>
+          <div class="absolute -bottom-28 right-44 z-10 w-max flex px-12 py-4 rounded-xl glass-effect">
+              <p class="grid">
+                <span class="text-3xl font-medium">17</span>
+                <span class="text-sm font-normal">hours</span> 
+              </p>
+              <span class="text-3xl px-2">:</span>
+              <p class="grid">
+                <span class="text-3xl font-medium">56</span>
+                <span class="text-sm font-normal">Minutes</span> 
+              </p>
+              <span class="text-3xl px-2">:</span>
+              <p class="grid">
+                <span class="text-3xl font-medium">03</span>
+                <span class="text-sm font-normal">Seconds</span> 
+              </p> 
+          </div>
         </div>
       </div>
       <!-- cards -->
@@ -90,16 +137,18 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
         </div>
       </div>
       <!-- company -->
-      <div class="container my-44">
-        <ul class="flex items-center flex-wrap justify-center px-40">
-          <li class="mx-8 my-3"><img src="../assets/icons/MetaMask.svg" alt="MetaMask" /></li>
-          <li class="mx-8 my-3"><img src="../assets/icons/trustwllet.svg" alt="trustwllet" /></li>
-          <li class="mx-8 my-3">
-            <img src="../assets/icons/wallet-contact.svg" alt="wallet-contact" />
-          </li>
-          <li class="mx-8 my-3"><img src="../assets/icons/Exodus.svg" alt="Exodus" /></li>
-          <li class="mx-8 my-3"><img src="../assets/icons/safepal.svg" alt="safepal" /></li>
-        </ul>
+      <div class="company-cards">
+        <div class="container my-44 ">
+          <ul class="flex items-center flex-wrap justify-center px-40">
+            <li class="mx-8 my-3"><img src="../assets/icons/MetaMask.svg" alt="MetaMask" /></li>
+            <li class="mx-8 my-3"><img src="../assets/icons/trustwllet.svg" alt="trustwllet" /></li>
+            <li class="mx-8 my-3">
+              <img src="../assets/icons/wallet-contact.svg" alt="wallet-contact" />
+            </li>
+            <li class="mx-8 my-3"><img src="../assets/icons/Exodus.svg" alt="Exodus" /></li>
+            <li class="mx-8 my-3"><img src="../assets/icons/safepal.svg" alt="safepal" /></li>
+          </ul>
+        </div>
       </div>
       <!-- top collector -->
       <div class="mt-24">
