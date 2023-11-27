@@ -7,15 +7,13 @@
 @layer base{
     body{
         @apply bg-[#171041] text-white
-        
     }
 }
 body{
     background-image: url('../../assets/icons/pink-effect.svg');
-    /* background-image: url('../../assets/icons/card-background-Logo.svg'); */
     background-repeat: no-repeat;
-}
-
+    overflow-x: hidden;
+}   
 .display-img:before{
     content:'';
     position: absolute; 
@@ -43,11 +41,8 @@ body{
     transform: rotate(270deg);
 
 }
-/* .cardes-line-effect{
-    background-image: url('../../assets/icons/card-background-Logo.svg');
-} */
 
-/* .company-cards:before{
+.company-cards:before{
     content:'';
     position: absolute; 
     z-index: -1;
@@ -56,8 +51,8 @@ body{
     height: 100%;
     width: 100%;
     left: 0;
-    top: 200px;
-} */
+    top: 350px;
+}
 .container{
     max-width: 1620px;
 }

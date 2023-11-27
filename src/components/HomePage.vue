@@ -5,11 +5,11 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
 </script>
 
 <template>
-  <div class="main-display">
-    <div class="container mx-auto">
-      <web-navbar />
+  <div>
+    <div class="">
+      <web-navbar class="container mx-auto"/>
       <!-- main img content -->
-      <div class="block md:flex mt-20 ">
+      <div class="block md:flex mt-20  container mx-auto">
         <!-- contact -->
         <div class="w-1/2 px-5">
           <h1 class="text-7xl mt-12">
@@ -37,10 +37,10 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
           </div>
         </div>
         <!-- img -->
-        <div class="w-1/2 relative display-img">
+        <div class="w-3/4 mx-auto mt-12 xl:mt-0 md:min-w-[800px] xl:w-1/2 relative display-img">
           <img src="../assets/icons/main_display_img.svg" alt="display-cartoon" class="mx-auto z-10 relative" />
-          <div class="glass-effect h-[300px] w-[60%] absolute -top-3 left-32 z-0" ></div>
-          <div class="glass-effect h-full w-[50%] absolute -bottom-16 right-36"></div>
+          <div class="glass-effect h-[300px] md:w-[538px] w-[70%] absolute -top-3 left-32 z-0" ></div>
+          <div class="glass-effect h-full md:w-[512px] w-[70%] absolute -bottom-16 right-36"></div>
           <div class="absolute top-0 right-20 z-20 w-max flex px-8 py-4 rounded-xl glass-effect">
             <p class="text-2xl font-semibold grid">BID NOW!
               <span class="text-xs font-normal">Latest Collection</span>
@@ -88,70 +88,77 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
           </div>
         </div>
       </div>
-      <!-- cards -->
-      <div class="flex justify-between my-40">
-        <div class="flex">
-          <cartoon-collection-card
-            title="Dartcat"
-            titleCount="#234T67"
-            currentTime="5.54 ETH"
-            endingTime="21h 47m"
-            cartoonNumber="1"
-          />
-          <cartoon-collection-card
-            title="Skeletok"
-            titleCount="#234T67"
-            currentTime="2.90 ETH"
-            endingTime="71h 19m"
-            cartoonNumber="2"
-          />
-        </div>
-        <div class="p-14">
-          <p>
-            NFT stands for non-fungible token. It is a unique digital token that is recorded on a
-            blockchain and verifies ownership and authenticity. It cannot be copied or replaced by
-            other tokens. It contains references to digital files, such as art, music, photos or
-            videos, which can be linked to real or imaginary assets. It differs from
-            cryptocurrencies, which are fungible and can be exchanged for one another. Owning an NFT
-            does not mean having rights to the associated file or its use, as this depends on the
-            legal status of the NFT and the file. NFTs can be created, sold and exchanged on digital
-            markets, where they can have high value or none. NFTs are criticized for their
-            environmental impact, as some types of blockchain consume a lot of energy and create a
-            large carbon footprint. NFTs are also criticized for their speculative nature, as their
-            price can fluctuate greatly or fall to zero.
-          </p>
-          <div class="mt-8 flex justify-between bg-[#382F5E] p-8 rounded-tr-3xl rounded-bl-3xl">
-            <p class="grid">
-              <span class="text-4xl">21k+</span>
-              <span class="text-xl text-gray-500">Working</span>
+
+      <div class="relative">
+
+        <!-- cards -->
+        <div class="flex flex-wrap lg:flex-nowrap  justify-between my-40 container mx-auto">
+          <div class="flex flex-wrap md:flex-nowrap">
+            <cartoon-collection-card
+              title="Dartcat"
+              titleCount="#234T67"
+              currentTime="5.54 ETH"
+              endingTime="21h 47m"
+              cartoonNumber="1"
+            />
+            <cartoon-collection-card
+              title="Skeletok"
+              titleCount="#234T67"
+              currentTime="2.90 ETH"
+              endingTime="71h 19m"
+              cartoonNumber="2"
+            />
+          </div>
+          <div class="p-14">
+            <p>
+              NFT stands for non-fungible token. It is a unique digital token that is recorded on a
+              blockchain and verifies ownership and authenticity. It cannot be copied or replaced by
+              other tokens. It contains references to digital files, such as art, music, photos or
+              videos, which can be linked to real or imaginary assets. It differs from
+              cryptocurrencies, which are fungible and can be exchanged for one another. Owning an NFT
+              does not mean having rights to the associated file or its use, as this depends on the
+              legal status of the NFT and the file. NFTs can be created, sold and exchanged on digital
+              markets, where they can have high value or none. NFTs are criticized for their
+              environmental impact, as some types of blockchain consume a lot of energy and create a
+              large carbon footprint. NFTs are also criticized for their speculative nature, as their
+              price can fluctuate greatly or fall to zero.
             </p>
-            <p class="grid">
-              <span class="text-4xl">11k+</span>
-              <span class="text-xl text-gray-500">At the aution</span>
-            </p>
-            <p class="grid">
-              <span class="text-4xl">3k+</span>
-              <span class="text-xl text-gray-500">Arts</span>
-            </p>
+            <div class="mt-8 flex justify-between bg-[#382F5E] p-8 rounded-tr-3xl rounded-bl-3xl">
+              <p class="grid">
+                <span class="text-4xl">21k+</span>
+                <span class="text-xl text-gray-500">Working</span>
+              </p>
+              <p class="grid">
+                <span class="text-4xl">11k+</span>
+                <span class="text-xl text-gray-500">At the aution</span>
+              </p>
+              <p class="grid">
+                <span class="text-4xl">3k+</span>
+                <span class="text-xl text-gray-500">Arts</span>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- company -->
-      <div class="company-cards">
-        <div class="container my-44 ">
-          <ul class="flex items-center flex-wrap justify-center px-40">
-            <li class="mx-8 my-3"><img src="../assets/icons/MetaMask.svg" alt="MetaMask" /></li>
-            <li class="mx-8 my-3"><img src="../assets/icons/trustwllet.svg" alt="trustwllet" /></li>
-            <li class="mx-8 my-3">
-              <img src="../assets/icons/wallet-contact.svg" alt="wallet-contact" />
-            </li>
-            <li class="mx-8 my-3"><img src="../assets/icons/Exodus.svg" alt="Exodus" /></li>
-            <li class="mx-8 my-3"><img src="../assets/icons/safepal.svg" alt="safepal" /></li>
-          </ul>
+
+        <!-- company -->
+        <div class="company-cards">
+          <div class="container mx-auto my-44">
+            <ul class="flex items-center flex-wrap justify-center px-40">
+              <li class="mx-8 my-3"><img src="../assets/icons/MetaMask.svg" alt="MetaMask" /></li>
+              <li class="mx-8 my-3"><img src="../assets/icons/trustwllet.svg" alt="trustwllet" /></li>
+              <li class="mx-8 my-3">
+                <img src="../assets/icons/wallet-contact.svg" alt="wallet-contact" />
+              </li>
+              <li class="mx-8 my-3"><img src="../assets/icons/Exodus.svg" alt="Exodus" /></li>
+              <li class="mx-8 my-3"><img src="../assets/icons/safepal.svg" alt="safepal" /></li>
+            </ul>
+          </div>
         </div>
+
       </div>
+
       <!-- top collector -->
-      <div class="mt-24">
+      <div class="mt-24 container mx-auto">
         <h2 class="collction text-7xl text-center font-medium">TOP COLLECTIONS</h2>
         <ul class="flex justify-center">
           <li class="text-xl px-5 py-3 mx-5 my-8">Art</li>
@@ -221,8 +228,9 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
           />
         </div>
       </div>
+
       <!-- working step -->
-      <div class="my-40">
+      <div class="my-40 container mx-auto">
         <h1 class="text-center text-3xl font-medium">Everything works in 3 steps</h1>
         <div class="flex justify-evenly mt-24">
           <!-- step-1 -->
@@ -248,7 +256,10 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
           </div>
         </div>
       </div>
+
     </div>
+
+    <!-- footer -->
     <div class="px-40 bg-[#140E3A]">
       <!-- get updates -->
       <div class="py-32 border-b border-gray-100">
