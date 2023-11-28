@@ -9,7 +9,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="card w-[383px] bg-[#382F5E] p-4 m-2 rounded-lg">
+    <div class="card lg:w-[383px] md:w-[350px] w-[290px] bg-[#382F5E] max-h-[500px] p-4 m-2 rounded-lg">
         <div calss="mx-auto">
             <img src="../../assets/icons/cartoon-char-1.svg" alt="cartoon" v-if ="cartoonNumber == 1">
             <img src="../../assets/icons/cartoon-char-2.svg" alt="cartoon" v-if ="cartoonNumber == 2">

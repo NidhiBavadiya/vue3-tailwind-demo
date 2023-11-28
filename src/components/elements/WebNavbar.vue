@@ -3,7 +3,7 @@
 </script>
 <template>
     <div class="mx-3">
-        <nav class="flex justify-between items-center">
+        <nav class="flex justify-between items-center px-5">
             <div>
                 <img src="../../assets/icons/spartak_main_logo.svg" alt="logo">
             </div>

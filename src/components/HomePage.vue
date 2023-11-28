@@ -6,41 +6,36 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
 
 <template>
   <div>
-    <div class="">
+    <!-- display header & main containt -->
+    <div>
       <web-navbar class="container mx-auto"/>
       <!-- main img content -->
-      <div class="block md:flex mt-20  container mx-auto">
+      <div class="block lg:flex mt-20  container mx-auto">
         <!-- contact -->
-        <div class="w-1/2 px-5">
-          <h1 class="text-7xl mt-12">
+        <div class="lg:w-1/2 px-5 text-center md:text-left">
+          <h1 class="text-4xl md:text-7xl mt-12">
             discover the <br />
             world of NFT <br />
             with <span class="spartak">SPARTAK</span> <br />
             token
           </h1>
-          <p class="text-base font-normal mt-8">
+          <p class="text-sm md:text-base font-normal mt-8">
             Do you want to be trendy and have something that no one else has? Then you need our NFT
             pictures. They are real art, created for you. You can be sure that no one can copy or
             steal your picture. You can earn money on your collection, selling or exchanging your
             NFT pictures on the market. But hurry up, because our collection is limited and quickly
             sold out. Don’t miss your chance, buy our NFT pictures right now!
           </p>
-          <div class="flex mt-12">
-            <button class="bg-button-color px-10 py-2 mr-2 rounded-tr-lg rounded-bl-lg text-black">
-              More
-            </button>
-            <button
-              class="rounded-tr-lg px-10 py-2 rounded-bl-lg bg-transparent border-2 border-white"
-            >
-              buy
-            </button>
+          <div class="flex md:justify-start justify-center mt-12">
+            <button class="bg-button-color px-10 py-2 mr-2 rounded-tr-lg rounded-bl-lg text-black"> More </button>
+            <button class="rounded-tr-lg px-10 py-2 rounded-bl-lg bg-transparent border-2 border-white"> buy </button>
           </div>
         </div>
         <!-- img -->
-        <div class="w-3/4 mx-auto mt-12 xl:mt-0 md:min-w-[800px] xl:w-1/2 relative display-img">
+        <div class=" mx-auto mt-12 xl:mt-0 lg:w-1/2 relative display-img">
           <img src="../assets/icons/main_display_img.svg" alt="display-cartoon" class="mx-auto z-10 relative" />
-          <div class="glass-effect h-[300px] md:w-[538px] w-[70%] absolute -top-3 left-32 z-0" ></div>
-          <div class="glass-effect h-full md:w-[512px] w-[70%] absolute -bottom-16 right-36"></div>
+          <div class="glass-effect h-[300px] md:w-[60%] w-[70%] absolute xl:-top-3 xl:left-32 z-0"></div>
+          <div class="glass-effect h-full md:w-[50%] w-[70%] absolute -bottom-16 right-36"></div>
           <div class="absolute top-0 right-20 z-20 w-max flex px-8 py-4 rounded-xl glass-effect">
             <p class="text-2xl font-semibold grid">BID NOW!
               <span class="text-xs font-normal">Latest Collection</span>
@@ -92,8 +87,8 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
       <div class="relative">
 
         <!-- cards -->
-        <div class="flex flex-wrap lg:flex-nowrap  justify-between my-40 container mx-auto">
-          <div class="flex flex-wrap md:flex-nowrap">
+        <div class="flex flex-wrap xl:flex-nowrap justify-center xl:justify-between my-40 container mx-auto" >
+          <div class="flex flex-wrap justify-center xl:justify-start md:flex-nowrap">
             <cartoon-collection-card
               title="Dartcat"
               titleCount="#234T67"
@@ -109,8 +104,8 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
               cartoonNumber="2"
             />
           </div>
-          <div class="p-14">
-            <p>
+          <div class="p-8 xl:text-left text-center">
+            <p> 
               NFT stands for non-fungible token. It is a unique digital token that is recorded on a
               blockchain and verifies ownership and authenticity. It cannot be copied or replaced by
               other tokens. It contains references to digital files, such as art, music, photos or
@@ -123,18 +118,18 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
               large carbon footprint. NFTs are also criticized for their speculative nature, as their
               price can fluctuate greatly or fall to zero.
             </p>
-            <div class="mt-8 flex justify-between bg-[#382F5E] p-8 rounded-tr-3xl rounded-bl-3xl">
-              <p class="grid">
-                <span class="text-4xl">21k+</span>
-                <span class="text-xl text-gray-500">Working</span>
+            <div class="mt-8 flex justify-between bg-[#382F5E] md:p-8 p-4 rounded-tr-3xl rounded-bl-3xl max-w-[700px] mx-auto">
+              <p class="grid px-4">
+                <span class="text-xl md:text-4xl">21k+</span>
+                <span class="text-sm md:text-xl text-gray-500">Working</span>
               </p>
-              <p class="grid">
-                <span class="text-4xl">11k+</span>
-                <span class="text-xl text-gray-500">At the aution</span>
+              <p class="grid px-4">
+                <span class="text-xl md:text-4xl">11k+</span>
+                <span class="text-sm md:text-xl text-gray-500">At the aution</span>
               </p>
-              <p class="grid">
-                <span class="text-4xl">3k+</span>
-                <span class="text-xl text-gray-500">Arts</span>
+              <p class="grid px-4">
+                <span class="text-xl md:text-4xl">3k+</span>
+                <span class="text-sm md:text-xl text-gray-500">Arts</span>
               </p>
             </div>
           </div>
@@ -143,14 +138,14 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
         <!-- company -->
         <div class="company-cards">
           <div class="container mx-auto my-44">
-            <ul class="flex items-center flex-wrap justify-center px-40">
-              <li class="mx-8 my-3"><img src="../assets/icons/MetaMask.svg" alt="MetaMask" /></li>
-              <li class="mx-8 my-3"><img src="../assets/icons/trustwllet.svg" alt="trustwllet" /></li>
-              <li class="mx-8 my-3">
+            <ul class="flex items-center flex-wrap justify-center xl:px-40 lg:px-30 md:px-20" >
+              <li class="mx-8 my-1 min-w-[250px]"><img src="../assets/icons/MetaMask.svg" alt="MetaMask" /></li>
+              <li class="mx-6 my-3 min-w-[250px]"><img src="../assets/icons/trustwllet.svg" alt="trustwllet" /></li>
+              <li class="mx-8 my-3 min-w-[250px]">
                 <img src="../assets/icons/wallet-contact.svg" alt="wallet-contact" />
               </li>
-              <li class="mx-8 my-3"><img src="../assets/icons/Exodus.svg" alt="Exodus" /></li>
-              <li class="mx-8 my-3"><img src="../assets/icons/safepal.svg" alt="safepal" /></li>
+              <li class="mx-8 my-3 min-w-[250px]"><img src="../assets/icons/Exodus.svg" alt="Exodus" /></li>
+              <li class="mx-8 my-3 min-w-[250px]"><img src="../assets/icons/safepal.svg" alt="safepal" /></li>
             </ul>
           </div>
         </div>
@@ -158,8 +153,8 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
       </div>
 
       <!-- top collector -->
-      <div class="mt-24 container mx-auto">
-        <h2 class="collction text-7xl text-center font-medium">TOP COLLECTIONS</h2>
+      <div class="mt-24 container mx-auto" >
+        <h2 class="collction text-4xl lg:text-7xl text-center font-medium">TOP COLLECTIONS</h2>
         <ul class="flex justify-center">
           <li class="text-xl px-5 py-3 mx-5 my-8">Art</li>
           <li class="text-xl px-5 py-3 mx-5 my-8">Collectibles</li>
@@ -168,7 +163,7 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
           <li class="text-xl px-5 py-3 mx-5 my-8">Sports</li>
           <li class="text-xl px-5 py-3 mx-5 my-8">Music</li>
         </ul>
-        <div class="flex flex-wrap">
+        <div class="flex justify-center flex-wrap">
           <cartoon-collection-card
             title="Dartcat"
             titleCount="#234T67"
@@ -230,26 +225,26 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
       </div>
 
       <!-- working step -->
-      <div class="my-40 container mx-auto">
+      <div class="my-40 container mx-auto" >
         <h1 class="text-center text-3xl font-medium">Everything works in 3 steps</h1>
-        <div class="flex justify-evenly mt-24">
+        <div class="flex justify-evenly md:flex-nowrap flex-wrap mt-24">
           <!-- step-1 -->
           <div
-            class="flex justify-center items-center flex-col bg-[#382F5E] p-8 w-[338px] h-[337px] rounded-3xl"
+            class="flex justify-center items-center flex-col bg-[#382F5E] md:p-8 p-12 m-3 w-[250px] h-[250px] md:w-[338px] md:h-[337px] rounded-3xl"
           >
             <img class="card-img-top" src="../assets/icons/worker.svg" alt="worker" />
             <h4 class="card-title text-center text-2xl">work</h4>
           </div>
           <!-- step-2 -->
           <div
-            class="flex justify-center items-center flex-col bg-[#382F5E] p-8 w-[338px] h-[337px] rounded-3xl"
+            class="flex justify-center items-center flex-col bg-[#382F5E] md:p-8 p-12 m-3 w-[250px] h-[250px] md:w-[338px] md:h-[337px] rounded-3xl"
           >
             <img class="card-img-top" src="../assets/icons/shop.svg" alt="shop" />
             <h4 class="card-title text-center text-2xl">sell it</h4>
           </div>
           <!-- step-3 -->
           <div
-            class="flex justify-center items-center flex-col bg-[#382F5E] p-8 w-[338px] h-[337px] rounded-3xl"
+            class="flex justify-center items-center flex-col bg-[#382F5E] md:p-8 p-12 m-3 w-[250px] h-[250px] md:w-[338px] md:h-[337px] rounded-3xl"
           >
             <img class="card-img-top" src="../assets/icons/sell.svg" alt="sell" />
             <h4 class="card-title text-center text-2xl">sell</h4>
@@ -260,7 +255,7 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
     </div>
 
     <!-- footer -->
-    <div class="px-40 bg-[#140E3A]">
+    <div class="px-5 md:px-20 lg:px-30 xl:px-40 bg-[#140E3A]" >
       <!-- get updates -->
       <div class="py-32 border-b border-gray-100">
         <h1 class="text-center text-5xl font-medium">Get More Updates</h1>
@@ -268,9 +263,9 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
           Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and
           tips and tricks
         </p>
-        <div class="bg-white mt-6 flex justify-between rounded-3xl p-1 mx-auto w-1/2">
-          <input type="email" class="w-3/4 p-2 text-black rounded-3xl focus-visible:outline-none" />
-          <button class="bg-button-color px-8 py-2 rounded-3xl text-right">I'm In</button>
+        <div class="bg-white mt-6 flex  min-w-max justify-between rounded-3xl p-1 mx-auto w-1/2">
+          <input type="email" class="w-3/4 p-2 min-w-[200px] text-black rounded-3xl focus-visible:outline-none" />
+          <button class="bg-button-color px-4 md:px-8 py-2 rounded-3xl text-right whitespace-nowrap">I'm In</button>
         </div>
       </div>
       <!-- footer -->
