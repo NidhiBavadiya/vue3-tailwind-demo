@@ -13,7 +13,19 @@ body{
     background-image: url('../../assets/icons/pink-effect.svg');
     background-repeat: no-repeat;
     overflow-x: hidden;
-}   
+} 
+.main-header-content{
+    position: relative;
+    transition: all 0.2s ease-out;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+} 
+.display-img{
+    transition: all 0.75s;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+} 
 .display-img:before{
     content:'';
     position: absolute; 
@@ -52,6 +64,19 @@ body{
     left: 0;
     top: 350px;
 }
+.cartoon-card::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    background-size: cover;
+    background-image: url(/src/assets/icons/corner.svg);
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 66px;
+    right: -3px;
+    top: -2px;
+    transform: rotate(358deg);
+}
 .container{
     max-width: 1620px;
 }
@@ -74,7 +99,10 @@ body{
     -webkit-backdrop-filter: blur(8.4px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     -webkit-transform: skew(350deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
+
 
 /* media query */
 @media screen and (max-width: 1024px) {

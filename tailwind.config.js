@@ -1,9 +1,8 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js}'],
   mode: 'jit',
   darkMode: false,
-  content: [],
+  content: [ "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
       backgroundColor: {
@@ -11,9 +10,12 @@ module.exports = {
       },
       backgroundImage: {
         'pink-effect': "url('../assets/icons/pink-effect.svg')",
+       
        }
       
     }
   },
-  plugins: []
+  plugins: [
+    require('flowbite/plugin')
+  ]
 }

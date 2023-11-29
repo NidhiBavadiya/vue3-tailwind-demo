@@ -2,6 +2,36 @@
 import WebNavbar from './elements/WebNavbar.vue'
 import WebFooter from './elements/WebFooter.vue'
 import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
+import BuyButton from './elements/BuyButton.vue';
+import MoreButton from './elements/MoreButton.vue';
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Items
+  var card = document.querySelector(".display-img");
+  var mainHeader = document.querySelector(".main-header-content");
+  var glass = document.querySelector(".glass-effect");
+
+  // Moving Animation Event
+  mainHeader.addEventListener("mousemove", function (e) {
+    let xAxis = (window.innerWidth / 2 - e.clientX) / 25;
+    let yAxis = (window.innerHeight / 2 - e.clientY) / 25;
+    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  });
+
+  // Animate on Hover
+  mainHeader.addEventListener("mouseenter", function () {
+    card.classList.add("has-transform");
+    glass.classList.add("has-transform");
+  });
+
+  mainHeader.addEventListener("mouseleave", function () {
+    // Pop Back on mouseleave
+    card.style.transform = "rotateY(0deg) rotateX(0deg)";
+    card.classList.remove("has-transform");
+    glass.classList.remove("has-transform");
+  });
+});
+
 </script>
 
 <template>
@@ -10,10 +40,10 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
     <div>
       <web-navbar class="container mx-auto"/>
       <!-- main img content -->
-      <div class="block lg:flex mt-20  container mx-auto">
+      <div class="block xl:flex mt-20  container mx-auto " >
         <!-- contact -->
-        <div class="lg:w-1/2 px-5 text-center md:text-left">
-          <h1 class="text-4xl md:text-7xl mt-12">
+        <div class="xl:w-1/2 px-5 text-center xl:text-left">
+          <h1 class="text-5xl md:text-7xl mt-12">
             discover the <br />
             world of NFT <br />
             with <span class="spartak">SPARTAK</span> <br />
@@ -26,68 +56,73 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
             NFT pictures on the market. But hurry up, because our collection is limited and quickly
             sold out. Don’t miss your chance, buy our NFT pictures right now!
           </p>
-          <div class="flex md:justify-start justify-center mt-12">
-            <button class="bg-button-color px-10 py-2 mr-2 rounded-tr-lg rounded-bl-lg text-black"> More </button>
-            <button class="rounded-tr-lg px-10 py-2 rounded-bl-lg bg-transparent border-2 border-white"> buy </button>
+          <div class="flex xl:justify-start justify-center mt-12">
+            <more-button buttonName="More"/>
+            <buy-button buttonName="Buy"/>
           </div>
         </div>
         <!-- img -->
-        <div class=" mx-auto mt-12 xl:mt-0 lg:w-1/2 relative display-img">
-          <img src="../assets/icons/main_display_img.svg" alt="display-cartoon" class="mx-auto z-10 relative" />
-          <div class="glass-effect h-[300px] md:w-[60%] w-[70%] absolute xl:-top-3 xl:left-32 z-0"></div>
-          <div class="glass-effect h-full md:w-[50%] w-[70%] absolute -bottom-16 right-36"></div>
-          <div class="absolute top-0 right-20 z-20 w-max flex px-8 py-4 rounded-xl glass-effect">
-            <p class="text-2xl font-semibold grid">BID NOW!
-              <span class="text-xs font-normal">Latest Collection</span>
-            </p>
-          </div>
-          <div class="absolute bottom-40 right-20 w-max z-20 flex px-4 py-4 rounded-xl glass-effect">
-            <div>
-              <img src="../assets/icons/twoline-img.svg" alt="line-img">
-            </div>
-            <div>
-              <p class="text-3xl font-semibold">HAPE #6959</p>
-              <span class="text-xs text-black">HAPES PRIME</span>
-            </div>
-          </div>
-          <div class="absolute bottom-6 left-9  flex justify-between w-[334px] z-20 px-8 py-4 rounded-xl glass-effect" id="parallelogram">
-            <p class="grid mr-8">
-              <span class="font-semibold text-2xl">5.758 ETH</span>
-              <span>Latest Bid</span>
-            </p>
-            <p class="grid">
-              <span>$5758.31</span>
-              <span class="text-green-500">+12.45%</span>
-            </p>
-          </div>
-          <div class="absolute -bottom-20 left-44 z-10 w-max flex px-6 py-2 rounded-xl glass-effect">
-            <p class="text-lg font-semibold grid">Auction
-              <span class="text-sm font-medium">End In</span>
-            </p>
-          </div>
-          <div class="absolute -bottom-28 right-44 z-10 w-max flex px-12 py-4 rounded-xl glass-effect">
-              <p class="grid">
-                <span class="text-3xl font-medium">17</span>
-                <span class="text-sm font-normal">hours</span> 
+        <div class="main-header-content">
+          <div class="hidden xl:block  mx-auto mt-12 xl:mt-0 xl:w-1/2 xl:min-w-[800px] relative display-img">
+            <img src="../assets/icons/main_display_img.svg" alt="display-cartoon" class="mx-auto z-10 relative" />
+            <div class="glass-effect   h-[300px] md:w-[60%] w-[70%] absolute xl:-top-3 xl:left-32 z-0"></div>
+            <div class="glass-effect h-full md:w-[50%] w-[70%] max-h-[600px]  absolute -bottom-16 right-36"></div>
+            <div class="absolute top-0 right-20 z-20 w-max flex px-8 py-4 rounded-xl glass-effect card-3d-effect">
+              <p class="text-2xl font-semibold grid">BID NOW!
+                <span class="text-xs font-normal">Latest Collection</span>
               </p>
-              <span class="text-3xl px-2">:</span>
-              <p class="grid">
-                <span class="text-3xl font-medium">56</span>
-                <span class="text-sm font-normal">Minutes</span> 
+            </div>
+            <div class="absolute bottom-40 right-20 w-max z-20 flex px-4 py-4 rounded-xl glass-effect">
+              <div>
+                <img src="../assets/icons/twoline-img.svg" alt="line-img">
+              </div>
+              <div>
+                <p class="text-3xl font-semibold">HAPE #6959</p>
+                <span class="text-xs text-black">HAPES PRIME</span>
+              </div>
+            </div>
+            <div class="absolute bottom-6 left-9  flex justify-between w-[334px] z-20 px-8 py-4 rounded-xl glass-effect" id="parallelogram">
+              <p class="grid mr-8">
+                <span class="font-semibold text-2xl">5.758 ETH</span>
+                <span>Latest Bid</span>
               </p>
-              <span class="text-3xl px-2">:</span>
               <p class="grid">
-                <span class="text-3xl font-medium">03</span>
-                <span class="text-sm font-normal">Seconds</span> 
-              </p> 
+                <span>$5758.31</span>
+                <span class="text-green-500">+12.45%</span>
+              </p>
+            </div>
+            <div class="absolute -bottom-20 left-44 z-10 w-max flex px-6 py-2 rounded-xl glass-effect">
+              <p class="text-lg font-semibold grid">Auction
+                <span class="text-sm font-medium">End In</span>
+              </p>
+            </div>
+            <div class="absolute -bottom-28 right-44 z-10 w-max flex px-12 py-4 rounded-xl glass-effect">
+                <p class="grid">
+                  <span class="text-3xl font-medium">17</span>
+                  <span class="text-sm font-normal">hours</span> 
+                </p>
+                <span class="text-3xl px-2">:</span>
+                <p class="grid">
+                  <span class="text-3xl font-medium">56</span>
+                  <span class="text-sm font-normal">Minutes</span> 
+                </p>
+                <span class="text-3xl px-2">:</span>
+                <p class="grid">
+                  <span class="text-3xl font-medium">03</span>
+                  <span class="text-sm font-normal">Seconds</span> 
+                </p> 
+            </div>
           </div>
+        </div>
+        <div class="block xl:hidden">
+          <img src="../assets/icons/header-display-img.svg" alt="game">
         </div>
       </div>
 
-      <div class="relative">
+      <div class="relative" >
 
         <!-- cards -->
-        <div class="flex flex-wrap xl:flex-nowrap justify-center xl:justify-between my-40 container mx-auto" >
+        <div class="flex flex-wrap xl:flex-nowrap justify-center xl:justify-between xl:my-40 my-20 container mx-auto" >
           <div class="flex flex-wrap justify-center xl:justify-start md:flex-nowrap">
             <cartoon-collection-card
               title="Dartcat"
@@ -149,21 +184,37 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
             </ul>
           </div>
         </div>
-
       </div>
 
       <!-- top collector -->
       <div class="mt-24 container mx-auto" >
-        <h2 class="collction text-4xl lg:text-7xl text-center font-medium">TOP COLLECTIONS</h2>
-        <ul class="flex justify-center">
-          <li class="text-xl px-5 py-3 mx-5 my-8">Art</li>
-          <li class="text-xl px-5 py-3 mx-5 my-8">Collectibles</li>
-          <li class="text-xl px-5 py-3 mx-5 my-8">Metaverse</li>
-          <li class="text-xl px-5 py-3 mx-5 my-8">Virtual Worlds</li>
-          <li class="text-xl px-5 py-3 mx-5 my-8">Sports</li>
-          <li class="text-xl px-5 py-3 mx-5 my-8">Music</li>
-        </ul>
-        <div class="flex justify-center flex-wrap">
+        <h2 class="collction text-4xl lg:text-7xl px-2 text-center font-medium">TOP COLLECTIONS</h2>
+
+        <!-- tabs -->
+        <div class="text-xl font-medium text-center text-white my-12 ">
+          <ul class="flex justify-center flex-wrap -mb-px">
+              <li class="me-2">
+                  <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Art</a>
+              </li>
+              <li class="me-2">
+                  <a href="#" class="inline-block p-4 text-[#9173D1] border-b-2 border-[#9173D1] rounded-t-lg active dark:text-[#9173D1] dark:border-[#9173D1]" aria-current="page">Collectibles</a>
+              </li>
+              <li class="me-2">
+                  <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Metaverse</a>
+              </li>
+              <li class="me-2">
+                  <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Virtual Worlds</a>
+              </li>
+              <li class="me-2">
+                <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Sports</a>
+              </li>
+              <li class="me-2">
+                <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Music</a>
+              </li>
+          </ul>
+        </div>
+
+        <div class="flex justify-center flex-wrap" >
           <cartoon-collection-card
             title="Dartcat"
             titleCount="#234T67"
@@ -226,7 +277,7 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
 
       <!-- working step -->
       <div class="my-40 container mx-auto" >
-        <h1 class="text-center text-3xl font-medium">Everything works in 3 steps</h1>
+        <h1 class="text-center text-3xl px-2 font-medium">Everything works in 3 steps</h1>
         <div class="flex justify-evenly md:flex-nowrap flex-wrap mt-24">
           <!-- step-1 -->
           <div
@@ -264,7 +315,7 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
           tips and tricks
         </p>
         <div class="bg-white mt-6 flex  min-w-max justify-between rounded-3xl p-1 mx-auto w-1/2">
-          <input type="email" class="w-3/4 p-2 min-w-[200px] text-black rounded-3xl focus-visible:outline-none" />
+          <input type="email" class="w-3/4 border-0 focus:outline-none p-2 min-w-[200px] text-black rounded-3xl focus-visible:outline-none" />
           <button class="bg-button-color px-4 md:px-8 py-2 rounded-3xl text-right whitespace-nowrap">I'm In</button>
         </div>
       </div>
@@ -276,4 +327,5 @@ import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>

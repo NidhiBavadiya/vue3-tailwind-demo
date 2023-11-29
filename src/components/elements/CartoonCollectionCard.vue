@@ -4,12 +4,13 @@ defineProps({
   titleCount: String,
   currentTime:String,
   endingTime:String,
-  cartoonNumber :Number,
+  cartoonNumber:Number,
 })
+
 </script>
 
 <template>
-    <div class="card lg:w-[383px] md:w-[350px] w-[290px] bg-[#382F5E] max-h-[500px] p-4 m-2 rounded-lg">
+    <div class="card cartoon-card  relative lg:w-[383px] md:w-[350px] w-[290px] bg-[#382F5E] max-h-[500px] p-4 m-2 rounded-lg  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-95">
         <div calss="mx-auto">
             <img src="../../assets/icons/cartoon-char-1.svg" alt="cartoon" v-if ="cartoonNumber == 1">
             <img src="../../assets/icons/cartoon-char-2.svg" alt="cartoon" v-if ="cartoonNumber == 2">
@@ -33,5 +34,4 @@ defineProps({
     </div>
 </template>
 <style scoped>
-
 </style>
