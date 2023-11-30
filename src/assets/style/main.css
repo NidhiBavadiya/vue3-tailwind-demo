@@ -1,34 +1,56 @@
 @import './base.css';
+@import './media.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    body{
-        @apply bg-[#171041] text-white
+@layer base {
+    body {
+        @apply bg-[#171041] text-white;
     }
 }
-body{
+
+body {
     background-image: url('../../assets/icons/pink-effect.svg');
     background-repeat: no-repeat;
     overflow-x: hidden;
-} 
-.main-header-content{
+}
+
+.container {
+    max-width: 1620px;
+}
+
+.spartak {
+    background: linear-gradient(to right, #9173d1 32.38%, #ec6ead 89.62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.collction {
+    font-family: monospace;
+    background: linear-gradient(to right, #9173d1 -10.13%, #dc6eb3 101.09%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-header-content {
     position: relative;
     transition: all 0.2s ease-out;
     -webkit-perspective: 1000px;
     perspective: 1000px;
-} 
-.display-img{
+}
+
+.display-img {
     transition: all 0.75s;
     position: relative;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-} 
-.display-img:before{
-    content:'';
-    position: absolute; 
+}
+
+.display-img:before {
+    content: '';
+    position: absolute;
     z-index: -1;
     background-image: url('../../assets/icons/img-before-shadow.svg');
     background-repeat: no-repeat;
@@ -39,9 +61,10 @@ body{
     background-size: contain;
     transform: rotate(352deg);
 }
-.display-img::after{
-    content:'';
-    position: absolute; 
+
+.display-img::after {
+    content: '';
+    position: absolute;
     z-index: -1;
     background-image: url('../../assets/icons/img-after-shadow.svg');
     background-repeat: no-repeat;
@@ -53,9 +76,9 @@ body{
     transform: rotate(270deg);
 }
 
-.company-cards:before{
-    content:'';
-    position: absolute; 
+.company-cards:before {
+    content: '';
+    position: absolute;
     z-index: -1;
     background-image: url('../../assets/icons/company-card-effect.svg');
     background-repeat: no-repeat;
@@ -64,10 +87,12 @@ body{
     left: 0;
     top: 350px;
 }
-.cartoon-card::before{
+
+/* carton collection card */
+.cartoon-card::before {
     content: '';
     position: absolute;
-    z-index: 1;
+    z-index: 11;
     background-size: cover;
     background-image: url(/src/assets/icons/corner.svg);
     background-repeat: no-repeat;
@@ -77,21 +102,24 @@ body{
     top: -2px;
     transform: rotate(358deg);
 }
-.container{
-    max-width: 1620px;
+
+.cartoon-card .span-effect {
+    background-color: #382f5e63; /* #382f5e4d */
+    -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    -webkit-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+           border-radius: 50%;
 }
-.spartak{
-    background: linear-gradient(to right, #9173D1 32.38%, #EC6EAD 89.62%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.cartoon-card:hover .span-effect {
+    /* width:-webkit-fill-available;
+    height: 100%; */
+    width: 225%;
+    height: 562.5px;
 }
-.collction{
-    font-family: monospace;
-    background: linear-gradient(to right, #9173D1 -10.13%, #DC6EB3 101.09%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.glass-effect{
+
+/* glass effect on card */
+.glass-effect {
     background: rgba(255, 255, 255, 0.11);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -103,15 +131,54 @@ body{
     transform-style: preserve-3d;
 }
 
+/* infinity scroll css */
 
-/* media query */
-@media screen and (max-width: 1024px) {
-    .display-img::after ,.display-img:before{
-       display: none;
-    }
+.slider::before,
+.slider::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 25%;
+    z-index: 2;
+    pointer-events: none;
 }
-@media screen and (max-width: 640px) {
-    .display-img::after{
-        right: 0;
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slide-track {
+    width: calc(150px * 20);
+    display: flex;
+    animation: scroll 20s linear infinite;
+    justify-content: space-between;
+}
+
+.slide {
+    width: 200px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.slide:hover {
+    transform: scale(0.8);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(calc(-150px * 5));
     }
 }

@@ -6,20 +6,12 @@ defineProps({
 </script>
 <template>
     <div>
-        <button class="px-10 py-2 mr-2 transform transition duration-500 ease-in-out text-black more-button"> {{buttonName}} </button>
+        <button class="px-3 md:px-10 py-2 mr-2 transform transition duration-500 ease-in-out text-black more-button whitespace-nowrap"> {{buttonName}} </button>
     </div>
 </template>
 
 <style >
 .more-button {
-    /* width: 200px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 20px;
-    height: 55px;
-    text-align:center;
-    border: none; */
     color: #fff;
     clip-path: polygon(
             0px 0,

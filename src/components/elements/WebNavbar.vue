@@ -28,7 +28,7 @@ import MoreButton from './MoreButton.vue';
     </div>
     <div>
       <nav class="bg-transprent w-full">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="max-w-screen-xl flex  items-center justify-between mx-auto p-4">
           <img src="../../assets/icons/spartak_main_logo.svg" alt="logo" />
           <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <more-button buttonName=" Connect Wallet"/>
