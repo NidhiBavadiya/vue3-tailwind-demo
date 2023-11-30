@@ -5,7 +5,7 @@
 </script>
 <template>
     <div>
-        <button class="px-10 py-2 text-black border-2 bg-[#E5E7EB] buy-button"> {{buttonName}} </button>
+        <button class="px-10 py-2 min-w-[100px] text-black border-2 bg-[#E5E7EB] buy-button"> {{buttonName}} </button>
     </div>
 </template>
 

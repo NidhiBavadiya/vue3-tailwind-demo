@@ -6,7 +6,7 @@ defineProps({
 </script>
 <template>
     <div>
-        <button class="px-3 md:px-10 py-2 mr-2 transform transition duration-500 ease-in-out text-black more-button whitespace-nowrap"> {{buttonName}} </button>
+        <button class="px-3 md:px-10 py-2 mr-2 min-w-[100px] transform transition duration-500 ease-in-out text-black more-button whitespace-nowrap"> {{buttonName}} </button>
     </div>
 </template>
 

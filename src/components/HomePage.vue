@@ -62,22 +62,21 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <!-- img -->
         <div class="main-header-content">
-          <div
-            class="hidden xl:block mx-auto mt-12 xl:mt-0 xl:w-1/2 xl:min-w-[800px] relative display-img"
-          >
+          <div class="mx-auto mt-12 xl:mt-0 xl:w-1/2 xl:min-w-[800px] relative display-img">
             <img
               src="../assets/icons/main_display_img.svg"
               alt="display-cartoon"
-              class="mx-auto z-10 relative"
+              class="mx-auto z-10 relative hidden xl:block"
             />
+            <img src="../assets/icons/header-display-img.svg" alt="game" class="xl:hidden block" />
             <div
-              class="glass-effect h-[300px] md:w-[60%] w-[70%] absolute xl:-top-3 xl:left-32 z-0"
+              class="glass-effect h-[300px] md:w-[60%] w-[70%] absolute xl:-top-3 xl:left-32 z-0 hidden xl:block"
             ></div>
             <div
-              class="glass-effect h-full md:w-[50%] w-[70%] max-h-[600px] absolute -bottom-16 right-36"
+              class="glass-effect h-full md:w-[50%] w-[70%] max-h-[600px] absolute -bottom-16 right-36 hidden xl:block"
             ></div>
             <div
-              class="absolute top-0 right-20 z-20 w-max flex px-8 py-4 rounded-xl glass-effect card-3d-effect"
+              class="absolute top-0 right-20 z-20 w-max px-8 py-4 rounded-xl glass-effect card-3d-effect hidden xl:flex"
             >
               <p class="text-2xl font-semibold grid">
                 BID NOW!
@@ -85,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
               </p>
             </div>
             <div
-              class="absolute bottom-40 right-20 w-max z-20 flex px-4 py-4 rounded-xl glass-effect"
+              class="absolute bottom-40 right-20 w-max z-20 px-4 py-4 rounded-xl glass-effect hidden xl:flex"
             >
               <div>
                 <img src="../assets/icons/twoline-img.svg" alt="line-img" />
@@ -96,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
               </div>
             </div>
             <div
-              class="absolute bottom-6 left-9 flex justify-between w-[334px] z-20 px-8 py-4 rounded-xl glass-effect"
+              class="absolute bottom-6 left-9 justify-between w-[334px] z-20 px-8 py-4 rounded-xl glass-effect hidden xl:flex"
               id="parallelogram"
             >
               <p class="grid mr-8">
@@ -109,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
               </p>
             </div>
             <div
-              class="absolute -bottom-20 left-44 z-10 w-max flex px-6 py-2 rounded-xl glass-effect"
+              class="absolute -bottom-20 left-44 z-10 w-max px-6 py-2 rounded-xl glass-effect hidden xl:flex"
             >
               <p class="text-lg font-semibold grid">
                 Auction
@@ -117,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
               </p>
             </div>
             <div
-              class="absolute -bottom-28 right-44 z-10 w-max flex px-12 py-4 rounded-xl glass-effect"
+              class="absolute -bottom-28 right-44 z-10 w-max px-12 py-4 rounded-xl glass-effect hidden xl:flex"
             >
               <p class="grid">
                 <span class="text-3xl font-medium">17</span>
@@ -136,9 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
           </div>
         </div>
-        <div class="block xl:hidden">
-          <img src="../assets/icons/header-display-img.svg" alt="game" />
-        </div>
       </div>
 
       <div class="relative">
@@ -152,14 +148,14 @@ document.addEventListener('DOMContentLoaded', function () {
               titleCount="#234T67"
               currentTime="5.54 ETH"
               endingTime="21h 47m"
-              cartoonNumber="1"
+              cartoonNumber= 1
             />
             <cartoon-collection-card
               title="Skeletok"
               titleCount="#234T67"
               currentTime="2.90 ETH"
               endingTime="71h 19m"
-              cartoonNumber="2"
+              cartoonNumber= 2
             />
           </div>
           <div class="p-8 xl:text-left text-center">
@@ -235,43 +231,37 @@ document.addEventListener('DOMContentLoaded', function () {
           <ul class="flex justify-center flex-wrap -mb-px">
             <li class="me-2">
               <a
-                href="#"
                 class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                aria-current="page"
                 >Art</a
               >
             </li>
             <li class="me-2">
               <a
-                href="#"
-                class="inline-block p-4 text-[#9173D1] border-b-2 border-[#9173D1] rounded-t-lg active dark:text-[#9173D1] dark:border-[#9173D1]"
-                aria-current="page"
+                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                 >Collectibles</a
               >
             </li>
             <li class="me-2">
               <a
-                href="#"
                 class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                 >Metaverse</a
               >
             </li>
             <li class="me-2">
               <a
-                href="#"
                 class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                 >Virtual Worlds</a
               >
             </li>
             <li class="me-2">
               <a
-                href="#"
                 class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                 >Sports</a
               >
             </li>
             <li class="me-2">
               <a
-                href="#"
                 class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                 >Music</a
               >
@@ -285,28 +275,28 @@ document.addEventListener('DOMContentLoaded', function () {
             titleCount="#234T67"
             currentTime="5.54 ETH"
             endingTime="21h 47m"
-            cartoonNumber="1"
+            cartoonNumber= 1
           />
           <cartoon-collection-card
             title="Skeletok"
             titleCount="#234T67"
             currentTime="2.90 ETH"
             endingTime="71h 19m"
-            cartoonNumber="2"
+            cartoonNumber= 2
           />
           <cartoon-collection-card
             title="COSMOcat"
             titleCount="#F34T67"
             currentTime="0.54 ETH"
             endingTime="27h 47m"
-            cartoonNumber="3"
+            cartoonNumber= 3
           />
           <cartoon-collection-card
             title="Skeletok"
             titleCount="#994T57"
             currentTime="2.81 ETH"
             endingTime="41h 21m"
-            cartoonNumber="4"
+            cartoonNumber= 4
           />
 
           <cartoon-collection-card
@@ -314,28 +304,28 @@ document.addEventListener('DOMContentLoaded', function () {
             titleCount="#234T67"
             currentTime="5.54 ETH"
             endingTime="21h 47m"
-            cartoonNumber="5"
+            cartoonNumber= 5
           />
           <cartoon-collection-card
             title="GHOSTCAT"
             titleCount="#881T77"
             currentTime="1.90 ETH"
             endingTime="11h 19m"
-            cartoonNumber="6"
+            cartoonNumber= 6
           />
           <cartoon-collection-card
             title="KNIGHTcat"
             titleCount="#034T67"
             currentTime="7.54 ETH"
             endingTime="91h 47m"
-            cartoonNumber="7"
+            cartoonNumber= 7
           />
           <cartoon-collection-card
             title="KINGCAT"
             titleCount="#T34T67"
             currentTime="2.21 ETH"
             endingTime="31h 1m"
-            cartoonNumber="8"
+            cartoonNumber= 8
           />
         </div>
       </div>

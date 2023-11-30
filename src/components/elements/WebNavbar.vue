@@ -33,7 +33,8 @@ import MoreButton from './MoreButton.vue';
           <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <more-button buttonName=" Connect Wallet"/>
             <!-- nav-button show in responsive -->
-
+          </div>
+          <div class="relative">
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
@@ -57,44 +58,43 @@ import MoreButton from './MoreButton.vue';
                 />
               </svg>
             </button>
-          </div>
-          <div
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          <div 
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 absolute min-w-min -left-28 md:left-0 dropdown_menu md:relative"
             id="navbar-sticky"
           >
             <ul
-              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transprent"
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100  rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-[#171041] md:bg-transprent"
             >
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 rounded bg-transparent md:text-[#9173D1] md:p-0"
-                  aria-current="page"
+                  class="block py-2 px-3 rounded hover:bg-[#9173D1] md:hover:bg-transparent md:hover:text-[#9173D1] md:p-0 md:dark:hover:text-[#9173D1] dark:text-white  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >Marketplace</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#9173D1] md:p-0 md:dark:hover:text-[#9173D1] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 px-3 rounded hover:bg-[#9173D1] md:hover:bg-transparent md:hover:text-[#9173D1] md:p-0 md:dark:hover:text-[#9173D1] dark:text-white  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >Collection</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#9173D1] md:p-0 md:dark:hover:text-[#9173D1] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 px-3 rounded hover:bg-[#9173D1] md:hover:bg-transparent md:hover:text-[#9173D1] md:p-0 md:dark:hover:text-[#9173D1] dark:text-white  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >Community</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#9173D1] md:p-0 md:dark:hover:text-[#9173D1] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 px-3 rounded hover:bg-[#9173D1] md:hover:bg-transparent md:hover:text-[#9173D1] md:p-0 md:dark:hover:text-[#9173D1] dark:text-white  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >Create</a
                 >
               </li>
             </ul>
+          </div>
           </div>
         </div>
       </nav>
@@ -102,4 +102,6 @@ import MoreButton from './MoreButton.vue';
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
