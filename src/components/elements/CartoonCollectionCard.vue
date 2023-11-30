@@ -6,29 +6,11 @@ defineProps({
   endingTime:String,
   cartoonNumber:Number,
 })
-
-document.addEventListener("DOMContentLoaded", () => {  
-  document.getElementByClassName("cartoon-card")
-    .addEventListener('mouseenter', (e) => {
-			let parentOffset = this.offset(),
-      		relX = e.pageX - parentOffset.left,
-      		relY = e.pageY - parentOffset.top;
-			this.find('span').css({top:relY, left:relX});
-    })
-    .addEventListener('mouseout', (e) => {
-			let parentOffset = this.offset(),
-      		relX = e.pageX - parentOffset.left,
-      		relY = e.pageY - parentOffset.top;
-    	this.find('span').css({top:relY, left:relX});
-    });
-  ('[href=#]').click(function(){return false});
-});
-
 </script>
 
 <template>
     <div>
-        <div class=" card cartoon-card overflow-hidden relative lg:w-[383px] md:w-[350px] w-[290px] bg-[#382F5E] max-h-[500px] p-4 m-2 rounded-lg">
+        <div class=" card cartoon-card overflow-hidden relative lg:w-[383px] md:w-[350px] w-[290px] bg-[#382F5E] transition duration-700 ease-in-out hover:bg-[#9489c163] max-h-[500px] p-4 m-2 rounded-lg">
             <div calss="mx-auto">
                 <img src="../../assets/icons/cartoon-char-1.svg" alt="cartoon" v-if ="cartoonNumber == 1" class="z-20">
                 <img src="../../assets/icons/cartoon-char-2.svg" alt="cartoon" v-if ="cartoonNumber == 2" class="z-20">
@@ -49,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </div>
             </div>
-            <span class="span-effect absolute block w-0 h-0  bg-[#382f5e63] z-10" ></span>
         </div>
     </div>
 </template>

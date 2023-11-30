@@ -103,20 +103,18 @@ body {
     transform: rotate(358deg);
 }
 
-.cartoon-card .span-effect {
-    background-color: #382f5e63; /* #382f5e4d */
+/* .cartoon-card .span-effect {
+    background-color: #9489c163;
     -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
     transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
     -webkit-transform: translate(-50%, -50%);
            transform: translate(-50%, -50%);
            border-radius: 50%;
-}
-.cartoon-card:hover .span-effect {
-    /* width:-webkit-fill-available;
-    height: 100%; */
+} */
+/* .cartoon-card:hover .span-effect {
     width: 225%;
     height: 562.5px;
-}
+} */
 
 /* glass effect on card */
 .glass-effect {
@@ -181,4 +179,23 @@ body {
     100% {
         transform: translateX(calc(-150px * 5));
     }
+}
+.insta-icon{
+color: yellow;
+}
+.insta-icon:hover{
+    color: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%);
+}
+.social-icon{
+   filter: brightness(0) invert(0.7); 
+   transition: 0.4s ease-in-out;
+}
+.social-icon:hover{
+    filter:none;
 }
