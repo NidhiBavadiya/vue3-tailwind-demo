@@ -2,6 +2,7 @@
 import WebNavbar from './elements/WebNavbar.vue'
 import WebFooter from './elements/WebFooter.vue'
 import CartoonCollectionCard from './elements/CartoonCollectionCard.vue'
+import CollectionCard from './elements/CollectionCard.vue'
 import BuyButton from './elements/BuyButton.vue'
 import MoreButton from './elements/MoreButton.vue'
 
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     glass.classList.remove('has-transform')
   })
 })
+
 </script>
 
 <template>
@@ -225,109 +227,8 @@ document.addEventListener('DOMContentLoaded', function () {
       <!-- top collector -->
       <div class="mt-24 container mx-auto">
         <h2 class="collction text-4xl lg:text-7xl px-2 text-center font-medium">TOP COLLECTIONS</h2>
-
-        <!-- tabs -->
-        <div class="text-xl font-medium text-center text-white my-12">
-          <ul class="flex justify-center flex-wrap -mb-px">
-            <li class="me-2">
-              <a
-                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                aria-current="page"
-                >Art</a
-              >
-            </li>
-            <li class="me-2">
-              <a
-                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                >Collectibles</a
-              >
-            </li>
-            <li class="me-2">
-              <a
-                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                >Metaverse</a
-              >
-            </li>
-            <li class="me-2">
-              <a
-                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                >Virtual Worlds</a
-              >
-            </li>
-            <li class="me-2">
-              <a
-                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                >Sports</a
-              >
-            </li>
-            <li class="me-2">
-              <a
-                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                >Music</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="flex justify-center flex-wrap">
-          <cartoon-collection-card
-            title="Dartcat"
-            titleCount="#234T67"
-            currentTime="5.54 ETH"
-            endingTime="21h 47m"
-            cartoonNumber= 1
-          />
-          <cartoon-collection-card
-            title="Skeletok"
-            titleCount="#234T67"
-            currentTime="2.90 ETH"
-            endingTime="71h 19m"
-            cartoonNumber= 2
-          />
-          <cartoon-collection-card
-            title="COSMOcat"
-            titleCount="#F34T67"
-            currentTime="0.54 ETH"
-            endingTime="27h 47m"
-            cartoonNumber= 3
-          />
-          <cartoon-collection-card
-            title="Skeletok"
-            titleCount="#994T57"
-            currentTime="2.81 ETH"
-            endingTime="41h 21m"
-            cartoonNumber= 4
-          />
-
-          <cartoon-collection-card
-            title="DRAcat"
-            titleCount="#234T67"
-            currentTime="5.54 ETH"
-            endingTime="21h 47m"
-            cartoonNumber= 5
-          />
-          <cartoon-collection-card
-            title="GHOSTCAT"
-            titleCount="#881T77"
-            currentTime="1.90 ETH"
-            endingTime="11h 19m"
-            cartoonNumber= 6
-          />
-          <cartoon-collection-card
-            title="KNIGHTcat"
-            titleCount="#034T67"
-            currentTime="7.54 ETH"
-            endingTime="91h 47m"
-            cartoonNumber= 7
-          />
-          <cartoon-collection-card
-            title="KINGCAT"
-            titleCount="#T34T67"
-            currentTime="2.21 ETH"
-            endingTime="31h 1m"
-            cartoonNumber= 8
-          />
-        </div>
+        <collection-card />
+   
       </div>
 
       <!-- working step -->
@@ -336,23 +237,23 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="flex justify-evenly md:flex-nowrap flex-wrap mt-24">
           <!-- step-1 -->
           <div
-            class="flex justify-center items-center flex-col bg-[#382F5E] md:p-8 p-12 m-3 w-[250px] h-[250px] md:w-[338px] md:h-[337px] rounded-3xl"
+            class="flex justify-center items-center flex-col bg-[#382F5E] hover:bg-[#9489c163] md:p-8 p-12 m-3 w-[250px] h-[250px] md:w-[338px] md:h-[337px] rounded-3xl"
           >
-            <img class="card-img-top" src="../assets/icons/worker.svg" alt="worker" />
+            <img class="card-img-top transition duration-500 delay-100  ease-in-out hover:rotate-[360deg]" src="../assets/icons/worker.svg" alt="worker"/>
             <h4 class="card-title text-center text-2xl">work</h4>
           </div>
           <!-- step-2 -->
           <div
-            class="flex justify-center items-center flex-col bg-[#382F5E] md:p-8 p-12 m-3 w-[250px] h-[250px] md:w-[338px] md:h-[337px] rounded-3xl"
+            class="flex justify-center items-center flex-col bg-[#382F5E]  hover:bg-[#9489c163] md:p-8 p-12 m-3 w-[250px] h-[250px] md:w-[338px] md:h-[337px] rounded-3xl"
           >
-            <img class="card-img-top" src="../assets/icons/shop.svg" alt="shop" />
+            <img class="card-img-top transition duration-500 delay-100  ease-in-out hover:rotate-[360deg]" src="../assets/icons/shop.svg" alt="shop" />
             <h4 class="card-title text-center text-2xl">sell it</h4>
           </div>
           <!-- step-3 -->
           <div
-            class="flex justify-center items-center flex-col bg-[#382F5E] md:p-8 p-12 m-3 w-[250px] h-[250px] md:w-[338px] md:h-[337px] rounded-3xl"
+            class="flex justify-center items-center flex-col bg-[#382F5E]  hover:bg-[#9489c163] md:p-8 p-12 m-3 w-[250px] h-[250px] md:w-[338px] md:h-[337px] rounded-3xl"
           >
-            <img class="card-img-top" src="../assets/icons/sell.svg" alt="sell" />
+            <img class="card-img-top transition duration-1000 delay-100  ease-in-out hover:rotate-[360deg]" src="../assets/icons/sell.svg" alt="sell" />
             <h4 class="card-title text-center text-2xl">sell</h4>
           </div>
         </div>
@@ -388,4 +289,6 @@ document.addEventListener('DOMContentLoaded', function () {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

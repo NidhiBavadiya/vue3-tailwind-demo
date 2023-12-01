@@ -8,6 +8,7 @@
 @layer base {
   body {
     @apply bg-[#171041] text-white;
+    overflow-x: hidden;
   }
 }
 
